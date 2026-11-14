@@ -157,7 +157,7 @@ Identify:
 
 ### Step 4 — Challenge Me
 
-Ask me one or two questions to verify my understanding.
+Ask me one substantive question at a time to verify my understanding.
 
 Wait for my response before continuing.
 

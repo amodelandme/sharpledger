@@ -2,7 +2,7 @@
 
 ## Project
 
-This repository contains a standalone, production-grade double-entry financial ledger implemented in C#/.NET and PostgreSQL.
+This project aims to build a standalone, production-grade double-entry financial ledger in C#/.NET and PostgreSQL. The current repository is an early scaffold; production readiness must be demonstrated, not assumed.
 
 The project has two equally important objectives:
 
@@ -92,9 +92,11 @@ If the repository is not initialized, begin with the financial domain and archit
 
 Do not scaffold the application until the initial scope, domain model, and first milestone have been discussed and approved.
 
-## Skills
+## Instruction precedence and skills
 
-Skills live in `skills/<skill-name>/SKILL.md` and follow the Agent Skills open standard.
+The project directives in `docs/engineering-standards.md` and `docs/learning-method.md` and the operating rules above govern project decisions. Rules and skills provide supporting guidance; adapt examples to the ledger and resolve conflicts in favor of those directives. Existing decisions are not reopened without a reason. Explain important tradeoffs and ask one substantive question at a time.
+
+Skills live in `skills/<skill-name>/SKILL.md`. Consult relevant skills selectively; examples are not automatic approval for dependencies, infrastructure, architectural decisions, or file changes. During learning and design, do not modify source files without an explicit request; approved implementation proceeds within its scope. Verify version-sensitive technical claims against current official documentation.
 
 ## Rules
 
@@ -107,6 +109,6 @@ Always-applied coding conventions live in `rules/`:
 - `performance.md` -- CancellationToken, TimeProvider, caching, async
 - `error-handling.md` -- Result pattern, ProblemDetails, exception boundaries
 - `git-workflow.md` -- Conventional commits, atomic commits, branch safety
-- `agents.md` -- MCP-first tools, subagent routing, skill loading
-- `hooks.md` -- Format hooks, pre-commit, post-test analysis
-- `packages.md` -- Latest stable NuGet versions, central package management
+- `agents.md` -- available tools, verification, skill loading
+- `hooks.md` -- handling configured hooks
+- `packages.md` -- compatible supported packages and dependency management

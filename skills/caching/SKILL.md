@@ -1,7 +1,7 @@
 ---
 name: caching
 description: >
-  Caching strategies for .NET 10 applications. Covers HybridCache (the default),
+  Caching strategies for .NET 10 applications. Covers HybridCache,
   output caching, response caching, and distributed cache patterns.
   Load this skill when implementing caching, optimizing read performance, reducing
   database load, or when the user mentions "cache", "HybridCache", "Redis",
@@ -13,7 +13,7 @@ description: >
 
 ## Core Principles
 
-1. **HybridCache is the default** — .NET 9+ introduced `HybridCache` as the unified caching abstraction. It combines in-memory (L1) and distributed (L2) caching with stampede protection. See ADR-004.
+1. **Choose caching deliberately** — Consider whether caching is needed and compare available options. For ledger balances define consistency, invalidation, concurrency, recovery, and verification before adopting any cache.
 2. **Cache reads, not writes** — Cache GET operations. Invalidate on mutations. Never cache POST/PUT/DELETE responses.
 3. **Output caching for entire responses** — When the full HTTP response can be cached (public APIs, static data), use output caching middleware.
 4. **Set explicit TTLs** — Every cached item needs an expiration. No unbounded caches.

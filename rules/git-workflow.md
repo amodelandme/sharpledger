@@ -49,3 +49,7 @@ description: >
 
 - **DO** keep PRs focused on a single concern. Split large changes into stacked PRs.
   Rationale: Smaller PRs get faster, higher-quality reviews.
+
+## Authorization
+
+- Workflow conventions do not themselves authorize creating commits, branches, or pull requests. Follow the requested scope and applicable session instructions.

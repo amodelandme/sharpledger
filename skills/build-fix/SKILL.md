@@ -117,7 +117,6 @@ run nested build-fix and test-fix loops). Nested loops get a smaller budget
 
 | Type  | Name                   | Purpose                                    |
 |-------|------------------------|--------------------------------------------|
-| Skill | `instinct-system` | Capture fix patterns in MEMORY.md          |
 | Agent | `dotnet-architect`     | Consulted for architectural error patterns |
 
 ### MCP Tools Used
