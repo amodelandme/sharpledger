@@ -1,0 +1,6 @@
+@sharpledger_HostAddress = http://localhost:5255
+
+GET {{sharpledger_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
