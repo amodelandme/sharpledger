@@ -91,3 +91,22 @@ Do not claim production readiness solely because tests pass.
 If the repository is not initialized, begin with the financial domain and architectural foundations.
 
 Do not scaffold the application until the initial scope, domain model, and first milestone have been discussed and approved.
+
+## Skills
+
+Skills live in `skills/<skill-name>/SKILL.md` and follow the Agent Skills open standard.
+
+## Rules
+
+Always-applied coding conventions live in `rules/`:
+
+- `coding-style.md` -- C# 14 style, naming, file organization
+- `architecture.md` -- Dependency direction, feature folders, data access
+- `security.md` -- Secrets, input validation, auth, transport security
+- `testing.md` -- Integration-first, xUnit v3, Testcontainers, AAA
+- `performance.md` -- CancellationToken, TimeProvider, caching, async
+- `error-handling.md` -- Result pattern, ProblemDetails, exception boundaries
+- `git-workflow.md` -- Conventional commits, atomic commits, branch safety
+- `agents.md` -- MCP-first tools, subagent routing, skill loading
+- `hooks.md` -- Format hooks, pre-commit, post-test analysis
+- `packages.md` -- Latest stable NuGet versions, central package management
