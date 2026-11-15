@@ -39,10 +39,12 @@ description: >
 
 ## Branch Safety
 
-- **DO** put all changes on a topic branch and open a pull request targeting `main`. Create the topic branch before committing work started in the main checkout.
-- **DON'T** push directly to `main`. Leave review and merging to the repository owner.
+- **DO** branch from `dev` for lesson and code changes, then open a pull request targeting `dev`. Create the topic branch before committing.
+- **DON'T** push directly to `dev` or `main`. Leave review and merging to the repository owner.
 
-- **DON'T** force-push to main or master. Ever.
+- **DO** promote releases through a pull request from `dev` into `main`. Use a merge commit to preserve shared history between the long-lived branches.
+
+- **DON'T** force-push to `dev` or `main`.
   Rationale: Force-push rewrites shared history and can destroy other contributors' work. (Hook bypass rules live in `hooks.md`.)
 
 ## PR Process
