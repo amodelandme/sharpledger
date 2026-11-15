@@ -6,6 +6,11 @@
 # dotenv files
 .env
 
+# Personal learning material
+/docs/learning/
+/docs/learning-journal.md
+/docs/learning-method.md
+
 # User-specific files
 *.rsuser
 *.suo

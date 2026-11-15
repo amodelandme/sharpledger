@@ -45,6 +45,32 @@ Ask one substantive question at a time.
 
 Do not modify source files unless explicitly requested.
 
+#### Visual Study Guides (HTML Output)
+
+Present conceptual lessons, deep-dives, architectural walkthroughs, and study guides as self-contained HTML5 files in `docs/learning/` (e.g., `docs/learning/<topic>.html`), rather than printing dense walls of text in the terminal. Make lessons substantial enough to study beyond a single session; use multiple linked pages when useful. Continue to work through discussion questions at the learner's pace, one substantive question at a time. Reply in the terminal with only the file path and a brief summary or follow-up question. Return to the terminal for coding and implementation work. The learning guides and personal learning journal are local, ignored material.
+
+As lessons are presented, update `docs/domain-glossary.md` with relevant terms and concise definitions. Distinguish accounting concepts from tentative design choices and product policies; do not record examples as established decisions.
+
+End lessons at a logical stopping point and explicitly tell the learner when a lesson is complete. Aim for a scope comparable to the ledger-account foundations lesson, while adapting to the topic. Record the next step in the learning journal when the learner ends a session.
+
+Every generated HTML file must embed all CSS inside a `<style>` tag (no external CDNs) and follow this visual design specification:
+
+- **Color Palette (Dark Cyan Theme):**
+  - Page background: Deep slate/obsidian (`#070d11`)
+  - Surface/Card background: Dark petrol/slate (`#0d181f`) with subtle cyan-tinted borders (`1px solid #16323d`)
+  - Primary text: Crisp off-white (`#e2eef3`), secondary/muted text (`#8aa6b2`)
+  - Primary accent (headings, links, active borders, badges): Vibrant cyan (`#06b6d4` / `#22d3ee`) with subtle glowing highlights (`box-shadow: 0 0 20px rgba(6, 182, 212, 0.08)`)
+  - Secondary accent (callouts/invariants): Emerald/teal (`#10b981`) for guarantees and amber (`#f59e0b`) for failure modes/pitfalls
+- **Typography & Layout:**
+  - Centered single-column container (`max-width: 880px; margin: 0 auto; padding: 3rem 1.5rem;`), generous `line-height: 1.7`, and clean system sans-serif fonts (`system-ui, -apple-system, sans-serif`).
+  - Distinct visual hierarchy with `<h1>` gradient or bright cyan accents, `<h2>` section dividers with bottom borders, and styled comparison tables (`border-collapse: collapse`, alternating subtle row shading `#0a1318`).
+- **Code & Architecture Diagrams:**
+  - Render `<pre><code>` blocks in dark code wells (`#04080b`) with monospace fonts, `1px solid #132a33` borders, and cyan syntax/label headers.
+  - Use clean inline SVGs or styled flexbox flow diagrams when illustrating ledger state transitions, transaction boundaries, or database schemas.
+- **Interactive Elements:**
+  - Include a sticky or top Table of Contents with smooth anchor scrolling.
+  - Include self-check review questions at the bottom using native `<details>` and `<summary>` tags styled as interactive dark-cyan accordions.
+
 ### Implementation
 
 Once a specification or implementation task is approved:
