@@ -39,12 +39,15 @@ description: >
 
 ## Branch Safety
 
+- **DO** put all changes on a topic branch and open a pull request targeting `main`. Create the topic branch before committing work started in the main checkout.
+- **DON'T** push directly to `main`. Leave review and merging to the repository owner.
+
 - **DON'T** force-push to main or master. Ever.
   Rationale: Force-push rewrites shared history and can destroy other contributors' work. (Hook bypass rules live in `hooks.md`.)
 
 ## PR Process
 
-- **DO** run verification (`/verify` or `dotnet build` + `dotnet test`) before creating a PR.
+- **DO** run verification (`/verify` or `dotnet build` + `dotnet test`) before creating a PR for code or build-affecting changes. For documentation-only changes, review the diff and run Git whitespace checks.
   Rationale: Broken PRs waste reviewer time and block CI pipelines.
 
 - **DO** keep PRs focused on a single concern. Split large changes into stacked PRs.
@@ -53,3 +56,5 @@ description: >
 ## Authorization
 
 - Workflow conventions do not themselves authorize creating commits, branches, or pull requests. Follow the requested scope and applicable session instructions.
+
+- Invoke `$submit-pr` to publish completed lesson or code changes for review. Finishing a lesson alone does not trigger publication.
